@@ -107,4 +107,30 @@ public class Iodato_b {
 		return total;
 	}
 
+	public static void calcularClientesDiferentes(Venta v[]) {
+		Venta[] vent = v;
+		int clientes_total = v.length;
+		int repeticiones_cliente = 0;
+
+		for (int i = 0; i < vent.length; i++) {
+			repeticiones_cliente = 0;
+			
+			if (vent[i]!=null) {
+				for (int j = 0; j < v.length; j++) {
+					if ((vent[j] != null && vent[i] != null )&& (vent[i].getNombre().equalsIgnoreCase(vent[j].getNombre())&& (i!=j))) {
+					
+						
+						vent[i]=null;
+						
+						repeticiones_cliente++;
+						
+					}
+			}
+			}
+				
+			System.out.println(repeticiones_cliente);
+		}
+
+	}
+
 }

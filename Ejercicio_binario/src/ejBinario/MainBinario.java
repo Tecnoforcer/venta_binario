@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class MainBinario {
 
 	public static void main(String[] args) {
-		Venta ventasAleer[] = new Venta[5];
+		Venta ventasAleer[] = new Venta[6];
 		ventasAleer[0] = new Venta("pako", 1, 3, 10);
 		ventasAleer[1] = new Venta("kagasawa", 1, 2, 10);
 		ventasAleer[2] = new Venta("mohamed", 3, 4, 9.99);
 		ventasAleer[3] = new Venta("pako", 2, 1, 19.95);
-		ventasAleer[4] = new Venta("wissin esneider", 2, 1, 19.95);
+		ventasAleer[4] = new Venta("pako", 2, 1, 19.95);
+		ventasAleer[5] = new Venta("wissin esneider", 2, 1, 19.95);
 
 		///
 		Iodato_b.guardarDisco(ventasAleer);
@@ -32,6 +33,8 @@ public class MainBinario {
 		}
 
 		///
+		
+		/*
 		System.out.println("que cliente quieres facturar");
 		do {
 			try {
@@ -45,9 +48,9 @@ public class MainBinario {
 
 		System.out.println("el cliente " + nomCliente + " tiene que pagar " + total + " euros");
 
-		
+		*/
 		///
-		
+		Iodato_b.calcularClientesDiferentes(ventas);
 		
 		
 		
