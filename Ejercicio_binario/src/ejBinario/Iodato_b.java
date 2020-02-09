@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Iodato_b {
-	private final static String directorio = "datos_venta/ventas.dat";
+	private final static String directorio = "Ejercicio_binario/datos_venta/ventas.dat";
 
 	public static Venta[] cargarDisco() {
 		File file = new File(directorio);
@@ -109,27 +109,28 @@ public class Iodato_b {
 
 	public static void calcularClientesDiferentes(Venta v[]) {
 		Venta[] vent = v;
-		int clientes_total = v.length;
-		int repeticiones_cliente = 0;
+		int clientes_total=0;
 
 		for (int i = 0; i < vent.length; i++) {
-			repeticiones_cliente = 0;
-			
-			if (vent[i]!=null) {
+
+			if (vent[i] != null) {
 				for (int j = 0; j < v.length; j++) {
-					if ((vent[j] != null && vent[i] != null )&& (vent[i].getNombre().equalsIgnoreCase(vent[j].getNombre())&& (i!=j))) {
-					
-						
-						vent[i]=null;
-						
-						repeticiones_cliente++;
-						
+					if ((vent[j] != null) && (vent[i].getNombre().equalsIgnoreCase(vent[j].getNombre()))) {
+
+						if ((i != j)) {
+							vent[j] = null;
+							
+						}
 					}
+				}
 			}
-			}
-				
-			System.out.println(repeticiones_cliente);
 		}
+		for (Venta venta : vent) {
+			if (venta!=null) {
+				clientes_total++;
+			}
+		}
+		System.out.println(clientes_total);
 
 	}
 

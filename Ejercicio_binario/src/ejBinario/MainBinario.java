@@ -34,7 +34,7 @@ public class MainBinario {
 
 		///
 		
-		/*
+		
 		System.out.println("que cliente quieres facturar");
 		do {
 			try {
@@ -48,7 +48,7 @@ public class MainBinario {
 
 		System.out.println("el cliente " + nomCliente + " tiene que pagar " + total + " euros");
 
-		*/
+		
 		///
 		Iodato_b.calcularClientesDiferentes(ventas);
 		
